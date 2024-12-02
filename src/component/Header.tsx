@@ -12,7 +12,6 @@ export default function Header(){
         burgerRef.current.classList.toggle("toggle-burger");
       }
     };
-  
 
     return(
         <>

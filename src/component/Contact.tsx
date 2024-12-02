@@ -1,32 +1,87 @@
+import React, { useState } from "react"
+import axios from "axios"
+
 export default function Contact(){
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+
+    const [status, setStatus] = useState("")
+
+    //Untuk menangani perubahan input 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>{
+        const { name, value} = e.target
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }))
+    }
+
+    //Untuk menangani submit form
+    const handleSubmit = async (e: React.FormEvent) =>{
+        e.preventDefault()
+        try{
+            const response = await axios.post("http://localhost:3001/contacts", formData)
+
+            if( response.status === 201){
+                setStatus("Send Data Successful")
+                setFormData({name:"", email:"", message:""})
+            }
+        } catch(error){
+            console.error("Error", error)
+            setStatus("An error occurred while sending data")
+        }
+    }
+
     return(
         <>
         <section id="contact">
             <div className="contact main-contractor">
                 <div className="contact-left">
                     <form 
-                    action="https://formspree.io/f/xjkvelqj"
-                    method="POST"
                     className="contact-form"
+                    onSubmit={handleSubmit}
                     >
                         <div>
-                            <input type="text" placeholder="Name" name="name"/>
+                            <input 
+                                type="text" 
+                                placeholder="Name" 
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                         <div>
-                            <input type="email" placeholder="Email" name="email"/>
+                            <input 
+                                type="email" 
+                                placeholder="Email" 
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                         <div>
-                            <textarea name="message" 
-                            id="message"
-                            cols={30}
-                            rows={10}
-                            placeholder="Message"
+                            <textarea 
+                                name="message" 
+                                id="message"
+                                cols={30}
+                                rows={10}
+                                placeholder="Message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
                             ></textarea>
                         </div>
                         <div>
                             <button className="btn-submit">Send Message</button>
                         </div>
                     </form>
+                    {status && <p>{status}</p>}
                 </div>
 
                 <div className="contact-right">
