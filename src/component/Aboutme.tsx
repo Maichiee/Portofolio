@@ -3,7 +3,7 @@ export default function Aboutme(){
         <>
         <section id="aboutmes">
             <div className="aboutsmes main-container">
-                <h3 className="pre-title">My Journey</h3>
+                <h3 className="pre-title">About Me</h3>
                 <h1 className="section-title">Skill & Education</h1>
 
                 <div className="aboutmes-grid">

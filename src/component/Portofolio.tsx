@@ -26,8 +26,8 @@ export default function Portofolio(){
                                     </a>
                                 </div>
                             <div className="portofolio-tags">
-                                <div>React</div>
-                                <div>Tailwind</div>
+                                <div>2024</div>
+                                <div>2025</div>
                             </div>
 
                             <p>
@@ -52,8 +52,8 @@ export default function Portofolio(){
                                     </a>
                                 </div>
                             <div className="portofolio-tags">
-                                <div>Viu</div>
-                                <div>ContentFul</div>
+                                <div>Node JS</div>
+                                <div>Laravel</div>
                             </div>
 
                             <p>
@@ -70,7 +70,7 @@ export default function Portofolio(){
 
                             <div className="portofolio-info">
                                 <div className="portofolio-title">
-                                    <h4>Dashbord Admin</h4>
+                                    <h4>Project Website</h4>
                                     <a href="/" className="portofolio-link">
                                     <svg 
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/>
@@ -78,8 +78,8 @@ export default function Portofolio(){
                                     </a>
                                 </div>
                             <div className="portofolio-tags">
-                                <div>React</div>
-                                <div>Materialieze</div>
+                                <div>Front End</div>
+                                <div>Back End</div>
                             </div>
 
                             <p>

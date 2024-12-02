@@ -2,7 +2,7 @@ export default function Footer(){
     return(
         <>
         <div className="footer-icons">
-            <a href="#">
+            <a href="https://www.instagram.com/imam_harits24/?hl=en">
             <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
@@ -15,7 +15,7 @@ export default function Footer(){
             </svg>
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/imam-harits-14a4bb24a/">
             <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" height="24" 
@@ -27,7 +27,7 @@ export default function Footer(){
             </svg>
             </a>
 
-            <a href="#">
+            <a href="https://x.com/Maichiiee">
             <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
@@ -39,7 +39,7 @@ export default function Footer(){
             </svg>
             </a>
 
-            <a href="#">
+            <a href="https://github.com/Maichiee">
             <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
